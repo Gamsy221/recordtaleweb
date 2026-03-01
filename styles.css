@@ -1,0 +1,256 @@
+﻿:root {
+  --ash-grey: #a3c4bc;
+  --black: #000000;
+  --charcoal-blue: #444957;
+  --brick-red: #ab3428;
+  --champagne-mist: #f9e2c4;
+
+  --gradient-brand: linear-gradient(135deg, #f9e2c4 0%, #a3c4bc 45%, #444957 100%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: var(--charcoal-blue);
+  background: #ffffff;
+
+  /* TODO: Replace body font when final brand typography is ready */
+  font-family: Arial, sans-serif;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.container {
+  width: min(1400px, 94vw);
+  margin-inline: auto;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--ash-grey);
+  backdrop-filter: blur(4px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.nav-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.8rem 0;
+}
+
+.logo img {
+  width: 180px;
+  height: auto;
+}
+
+.desktop-nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.desktop-nav a,
+.mobile-nav a {
+  text-decoration: none;
+  color: var(--charcoal-blue);
+  padding: 0.5rem 0.7rem;
+  border-radius: 6px;
+  transition: background-color 160ms ease, color 160ms ease;
+}
+
+.desktop-nav a:hover,
+.mobile-nav a:hover,
+.desktop-nav a.active,
+.mobile-nav a.active {
+  background: var(--champagne-mist);
+  color: var(--black);
+}
+
+.menu-toggle {
+  display: none;
+  border: 1px solid rgba(68, 73, 87, 0.3);
+  background: transparent;
+  border-radius: 8px;
+  width: 42px;
+  height: 42px;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  border-radius: 4px;
+  background: var(--champagne-mist);
+  margin: 4px 0;
+}
+
+.mobile-nav {
+  display: none;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 0 4vw 0.9rem;
+}
+
+.mobile-nav.open {
+  display: flex;
+}
+
+.hero {
+  padding: 2rem 0 3rem;
+}
+
+.content {
+  text-align: center;
+}
+
+h1,
+h2,
+.placeholder-title {
+  margin: 0;
+  line-height: 1.2;
+
+  /* TODO: Replace heading font when final brand typography is ready */
+  font-family: 'Arial Black', Arial, sans-serif;
+}
+
+h1 {
+  color: var(--charcoal-blue);
+  font-size: clamp(2rem, 4.5vw, 3.1rem);
+}
+
+.subheading {
+  margin: 1rem auto 2rem;
+  max-width: 700px;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+}
+
+.media-grid {
+  display: grid;
+  grid-template-columns: 2.5fr 4.5fr;
+  gap: 1.25rem;
+  text-align: left;
+}
+
+.card {
+  border-radius: 16px;
+  padding: 1rem;
+  background: var(--champagne-mist);
+  box-shadow: 0 14px 32px rgba(68, 73, 87, 0.12);
+  border: 1px solid rgba(68, 73, 87, 0.09);
+}
+
+.card h2 {
+  margin-bottom: 0.9rem;
+  color: var(--charcoal-blue);
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.video-frame {
+  margin-inline: auto;
+  width: min(100%, 420px);
+  aspect-ratio: 9 / 16;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 2px solid var(--ash-grey);
+  background: var(--gradient-brand);
+}
+
+.video-frame iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.calendly-card .calendly-inline-widget {
+  width: 100%;
+  min-width: 0;
+  height: 700px;
+}
+
+.placeholder-main {
+  padding: 4rem 0;
+  min-height: calc(100dvh - 84px);
+  display: grid;
+  place-items: center;
+}
+
+.placeholder-panel {
+  width: min(700px, 92vw);
+  text-align: center;
+  padding: 2rem;
+  border-radius: 16px;
+  background: var(--champagne-mist);
+  border: 1px solid rgba(68, 73, 87, 0.15);
+  box-shadow: 0 14px 32px rgba(68, 73, 87, 0.1);
+}
+
+.placeholder-title {
+  color: var(--brick-red);
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  margin-bottom: 0.8rem;
+}
+
+.placeholder-text {
+  margin: 0;
+  font-size: 1rem;
+}
+
+@media (max-width: 900px) {
+  .media-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .video-frame {
+    width: min(100%, 360px);
+  }
+}
+
+@media (max-width: 760px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: inline-block;
+  }
+
+  .hero {
+    padding-top: 1.4rem;
+  }
+
+  .subheading {
+    margin-bottom: 1.5rem;
+  }
+
+  .card {
+    padding: 0.85rem;
+  }
+
+  .calendly-card .calendly-inline-widget {
+    height: 620px;
+  }
+}
+
+
+
+
+
+
