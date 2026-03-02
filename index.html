@@ -3,77 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Recordtale | Schedule a Free Session</title>
+  <title>Recordtale | Home</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
-  <header class="site-header">
-    <div class="container nav-wrap">
-      <a class="logo" href="index.html" aria-label="Recordtale Home">
-        <img src="logo.png" alt="Recordtale Logo" />
-      </a>
+<body data-page="home">
+  <header id="site-header"></header>
 
-      <button class="menu-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Toggle navigation">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+  <main class="home-hero">
+    <section class="container home-hero-grid">
+      <div class="home-copy">
+        <h1>Save your story,<br />while you&rsquo;re living it.</h1>
+        <p class="subheading">Record and preserve your personal stories for your children, family, friends, and posterity - one meaningful conversation at a time.</p>
+        <a class="home-cta" href="book-session.html">Book Now</a>
+      </div>
 
-      <nav class="desktop-nav" aria-label="Primary">
-        <a href="index.html" class="active">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </div>
-
-    <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile primary">
-      <a href="index.html" class="active">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
-
-  <main class="hero">
-    <section class="container content">
-      <h1>Schedule a Free Session</h1>
-      <p class="subheading">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer viverra, sem non gravida feugiat, nibh nisl bibendum velit, ac faucibus est erat nec quam.</p>
-
-      <div class="media-grid">
-        <article class="card video-card">
-          <h2>What is Recordtale?</h2>
-          <div class="video-frame">
-            <iframe
-              src="https://www.youtube.com/embed/jfKfPfyJRdk?autoplay=1&mute=1&playsinline=1&loop=1&playlist=jfKfPfyJRdk"
-              title="Placeholder vertical video"
-              allow="autoplay; encrypted-media; picture-in-picture"
-              allowfullscreen>
-            </iframe>
-          </div>
-        </article>
-
-        <article class="card calendly-card">
-          <h2>Book Your Time</h2>
-          <div class="calendly-inline-widget" data-url="https://calendly.com/calendly/30min" style="min-width:320px;height:700px;"></div>
-        </article>
+      <div class="home-media">
+        <img src="assets/studio concept 1.png" alt="Recordtale studio concept" class="home-media-image" />
       </div>
     </section>
   </main>
-
-  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
-  <script>
-    const toggleButton = document.querySelector('.menu-toggle');
-    const mobileNav = document.getElementById('mobile-nav');
-
-    toggleButton.addEventListener('click', () => {
-      const isExpanded = toggleButton.getAttribute('aria-expanded') === 'true';
-      toggleButton.setAttribute('aria-expanded', String(!isExpanded));
-      mobileNav.classList.toggle('open');
-    });
-  </script>
+  <footer id="site-footer"></footer>
+    <script src="shared-layout.js"></script>
 </body>
 </html>
+
 
 
 

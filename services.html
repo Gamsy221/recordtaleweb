@@ -6,47 +6,93 @@
   <title>Recordtale | Services</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
-  <header class="site-header">
-    <div class="container nav-wrap">
-      <a class="logo" href="index.html" aria-label="Recordtale Home">
-        <img src="logo.png" alt="Recordtale Logo" />
-      </a>
-      <button class="menu-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Toggle navigation">
-        <span></span><span></span><span></span>
-      </button>
-      <nav class="desktop-nav" aria-label="Primary">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html" class="active">Services</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </div>
-    <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile primary">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html" class="active">Services</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+<body data-page="services">
+  <header id="site-header"></header>
 
-  <main class="placeholder-main">
-    <section class="placeholder-panel">
-      <h1 class="placeholder-title">Services</h1>
-      <p class="placeholder-text">This is a temporary Services page placeholder for Recordtale.</p>
+  <main class="about-main">
+    <section class="container about-section about-process">
+      <h2>What We Do</h2>
+      <h3>We Create Personal Legacy Films</h3>
+      <div class="about-process-copy">
+        <p class="services-lead">Here&rsquo;s how it works:</p>
+        <div class="services-flow" aria-label="How it works">
+          <article class="flow-step">
+            <span class="step-number">1</span>
+            <p>Complete the intake survey so we can tailor your session.</p>
+          </article>
+          <span class="flow-arrow" aria-hidden="true">&rarr;</span>
+          <article class="flow-step">
+            <span class="step-number">2</span>
+            <p>Record a 40-45 minute interview in our professional studio.</p>
+          </article>
+          <span class="flow-arrow" aria-hidden="true">&rarr;</span>
+          <article class="flow-step">
+            <span class="step-number">3</span>
+            <p>A producer performs a live edit while your session is in progress.</p>
+          </article>
+          <span class="flow-arrow" aria-hidden="true">&rarr;</span>
+          <article class="flow-step">
+            <span class="step-number">4</span>
+            <p>You receive a polished final video ready to share and download.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <hr class="about-divider" />
+
+    <section class="container about-section services-pricing">
+      <h2>Service Packages</h2>
+      <p class="services-pricing-subheading">Choose the format that best fits your story goals.</p>
+
+      <div class="pricing-grid">
+        <article class="pricing-card">
+          <h3>Starter Session</h3>
+          <p class="pricing-price">$199</p>
+          <p class="pricing-note">Single storyteller session</p>
+          <ul>
+            <li>One 30-minute recorded interview</li>
+            <li>Single-camera studio capture</li>
+            <li>Basic cleanup and delivery</li>
+            <li>Hosted private link + download file</li>
+          </ul>
+        </article>
+
+        <article class="pricing-card pricing-card-featured">
+          <h3>Signature Story</h3>
+          <p class="pricing-price">$399</p>
+          <p class="pricing-note">Most popular</p>
+          <ul>
+            <li>One 45-minute guided interview</li>
+            <li>Multi-camera studio production</li>
+            <li>Live producer-assisted edit</li>
+            <li>Polished final video with custom title card</li>
+            <li>Hosted private link + download file</li>
+          </ul>
+        </article>
+
+        <article class="pricing-card">
+          <h3>Legacy Collection</h3>
+          <p class="pricing-price">$749</p>
+          <p class="pricing-note">For deeper family archives</p>
+          <ul>
+            <li>Two full interview sessions</li>
+            <li>Expanded story planning + intake</li>
+            <li>Multi-camera production on both sessions</li>
+            <li>Extended edit with chapter-style structure</li>
+            <li>Hosted private link + downloadable master files</li>
+          </ul>
+        </article>
+      </div>
     </section>
   </main>
-
-  <script>
-    const toggleButton = document.querySelector('.menu-toggle');
-    const mobileNav = document.getElementById('mobile-nav');
-    toggleButton.addEventListener('click', () => {
-      const isExpanded = toggleButton.getAttribute('aria-expanded') === 'true';
-      toggleButton.setAttribute('aria-expanded', String(!isExpanded));
-      mobileNav.classList.toggle('open');
-    });
-  </script>
+  <footer id="site-footer"></footer>
+    <script src="shared-layout.js"></script>
 </body>
 </html>
+
+
+
+
 
 

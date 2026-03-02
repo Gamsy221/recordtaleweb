@@ -6,29 +6,8 @@
   <title>Recordtale | Contact</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
-  <header class="site-header">
-    <div class="container nav-wrap">
-      <a class="logo" href="index.html" aria-label="Recordtale Home">
-        <img src="logo.png" alt="Recordtale Logo" />
-      </a>
-      <button class="menu-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Toggle navigation">
-        <span></span><span></span><span></span>
-      </button>
-      <nav class="desktop-nav" aria-label="Primary">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="contact.html" class="active">Contact</a>
-      </nav>
-    </div>
-    <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile primary">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="contact.html" class="active">Contact</a>
-    </nav>
-  </header>
+<body data-page="contact">
+  <header id="site-header"></header>
 
   <main class="placeholder-main">
     <section class="placeholder-panel">
@@ -36,17 +15,15 @@
       <p class="placeholder-text">This is a temporary Contact page placeholder for Recordtale.</p>
     </section>
   </main>
-
-  <script>
-    const toggleButton = document.querySelector('.menu-toggle');
-    const mobileNav = document.getElementById('mobile-nav');
-    toggleButton.addEventListener('click', () => {
-      const isExpanded = toggleButton.getAttribute('aria-expanded') === 'true';
-      toggleButton.setAttribute('aria-expanded', String(!isExpanded));
-      mobileNav.classList.toggle('open');
-    });
-  </script>
+  <footer id="site-footer"></footer>
+    <script src="shared-layout.js"></script>
 </body>
 </html>
+
+
+
+
+
+
 
 
