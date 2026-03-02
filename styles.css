@@ -277,6 +277,22 @@ h1 {
   text-align: left;
 }
 
+.home-copy-logo {
+  width: clamp(196px, 25.3vw, 299px);
+  height: auto;
+  margin-bottom: 0.8rem;
+}
+
+.home-logo-divider {
+  display: block;
+  width: 100px;
+  height: 2px;
+  border-radius: 999px;
+  background: var(--charcoal-blue);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
 .home-copy .subheading {
   margin: 1rem 0 0;
   max-width: 780px;
