@@ -186,6 +186,15 @@ h1 {
   border: 0;
 }
 
+[data-page="founders-special"] .video-frame {
+  margin-top: 80px;
+}
+
+[data-page="founders-special"] .video-card h2,
+[data-page="founders-special"] .calendly-card h2 {
+  font-size: clamp(1.5rem, 2.2vw, 2rem);
+}
+
 .calendly-card .calendly-inline-widget {
   width: 100%;
   min-width: 0;
@@ -309,11 +318,33 @@ h1 {
   border: 1px solid var(--ash-grey);
   text-decoration: none;
 
-  /* TODO: Replace heading font when final brand typography is ready */
-  font-family: var(--font-heading);
+  font-family: var(--font-body);
   font-weight: 700;
   font-size: 1.1rem;
   line-height: 1;
+}
+
+.home-cta-row {
+  margin-top: 1.4rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.home-cta-row .home-cta {
+  margin-top: 5rem;
+}
+
+.home-beehiiv-embed {
+  width: 560px;
+  max-width: 100%;
+  min-height: 207px;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  background-color: transparent;
+  box-shadow: 0 0 #0000;
 }
 
 .home-cta:hover {
@@ -357,6 +388,10 @@ h1 {
   .home-copy .subheading {
     margin-inline: auto;
   }
+
+  .home-cta-row {
+    justify-content: center;
+  }
 }
 
 .desktop-nav a.nav-cta {
@@ -366,8 +401,7 @@ h1 {
   border: 1px solid var(--ash-grey);
   border-radius: 999px;
   padding: 0.5rem 1rem;
-  /* TODO: Replace heading font when final brand typography is ready */
-  font-family: var(--font-heading);
+  font-family: var(--font-body);
   font-weight: 700;
 }
 
@@ -386,8 +420,7 @@ h1 {
   background: var(--brick-red);
   color: var(--champagne-mist);
   border: 1px solid var(--ash-grey);
-  /* TODO: Replace heading font when final brand typography is ready */
-  font-family: var(--font-heading);
+  font-family: var(--font-body);
   font-weight: 700;
 }
 
